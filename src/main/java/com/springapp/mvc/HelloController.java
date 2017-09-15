@@ -5,11 +5,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class HelloController {
+
+
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String defaultRoute(ModelMap model, HttpServletRequest request) {
@@ -20,6 +23,12 @@ public class HelloController {
 			return "welcome";
 		}
 		return "hello";
+	}
+
+	@RequestMapping(value = "/version", method = RequestMethod.GET)
+	@ResponseBody
+	public String version() {
+		return "1.0.0";
 	}
 
 
