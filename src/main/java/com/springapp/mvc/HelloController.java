@@ -35,7 +35,7 @@ public class HelloController {
 	@RequestMapping(value = "/process", method = RequestMethod.GET)
 	@ResponseBody
 	public String longProcess(HttpServletRequest request) throws InterruptedException {
-		for (int i = 0; i > 60; i++) {
+		for (int i = 0; i < 60; i++) {
 
 			Thread.sleep(1000);
 			System.out.println("v2 - " + i);
