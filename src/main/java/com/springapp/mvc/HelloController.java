@@ -31,6 +31,18 @@ public class HelloController {
 		return "1.0.0";
 	}
 
+	@RequestMapping(value = "/process", method = RequestMethod.GET)
+	@ResponseBody
+	public String longProcess(HttpServletRequest request) throws InterruptedException {
+		for (int i = 0; i > 60; i++) {
+
+			Thread.sleep(1000);
+			System.out.println("v1 - " + i);
+
+		}
+		return "done v1";
+	}
+
 
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String index(ModelMap model, HttpServletRequest request) {
