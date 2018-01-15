@@ -4,7 +4,7 @@
     <groupId>com.springapp</groupId>
     <artifactId>demo</artifactId>
     <packaging>war</packaging>
-    <version>2.0.0</version>
+    <version>4.0.0</version>
     <name>spring-demo-app</name>
 
     <properties>

@@ -28,7 +28,7 @@ public class HelloController {
 	@RequestMapping(value = "/version", method = RequestMethod.GET)
 	@ResponseBody
 	public String version() {
-		return "2.0.0";
+		return "4.0.0";
 	}
 
 	@RequestMapping(value = "/process", method = RequestMethod.GET)
